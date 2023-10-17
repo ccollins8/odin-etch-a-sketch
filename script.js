@@ -32,4 +32,16 @@ function createGrid() {
 
 createGrid();
 
+// button that allows user to change grid
+const button = document.querySelector('button')
 
+button.addEventListener('click', () => {
+    grid = prompt('Enter number of rows and columns: ');
+    if (grid <= 100) {
+        container.innerHTML = "";
+        createGrid()
+    } else {
+        alert('Do not exceed 100')
+    }
+    
+})
